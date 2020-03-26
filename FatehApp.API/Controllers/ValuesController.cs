@@ -5,10 +5,12 @@ using System.Threading.Tasks;
 using FatehApp.API.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 
 namespace FatehApp.API.Controllers
 {
-   [Route("api/[controller]")]
+    [Authorize]
+    [Route("api/[controller]")]
     [ApiController]
     public class ValuesController : ControllerBase
     {
