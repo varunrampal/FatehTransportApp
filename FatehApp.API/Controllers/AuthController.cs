@@ -53,8 +53,9 @@ namespace FatehApp.API.Controllers
         {
             var userFromRepo = await _repo.Login(userForLoginDto.Username.ToLower(), userForLoginDto.Password);
 
-            if (userFromRepo == null)
+            if (userFromRepo == null) {
                 return Unauthorized();
+            }
 
             var claims = new[]
             {

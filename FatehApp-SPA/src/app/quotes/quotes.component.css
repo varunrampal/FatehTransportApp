@@ -1,0 +1,24 @@
+.modal-dialog{
+    max-width: 600px !important;
+    width: 600px !important;
+  }
+
+  .dpinfo {
+    postion:absolute;
+    box-shadow: 10px #333;
+    
+    border:1px solid;
+    overflow:hidden;
+    block:inline;
+   
+    width:200px;
+    background-color: #000;
+    float: left;
+    margin: 5px;
+    text-align: center;
+    color:white;
+   
+   vertical-align:middle;
+    text-decoration:none;
+    
+}

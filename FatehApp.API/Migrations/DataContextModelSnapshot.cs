@@ -16,6 +16,41 @@ namespace FatehApp.API.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "3.1.0");
 
+            modelBuilder.Entity("FatehApp.API.Models.Quote", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("CompanyName")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("DestinationCity")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("OriginCity")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Overview")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Phone")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("QuoteDate")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Quotes");
+                });
+
             modelBuilder.Entity("FatehApp.API.Models.User", b =>
                 {
                     b.Property<int>("Id")

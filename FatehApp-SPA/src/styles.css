@@ -1,3 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
 @import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 @import '../node_modules/font-awesome/css/font-awesome.min.css';
+@import '../node_modules/alertifyjs/build/css/alertify.min.css';
+@import '../node_modules/alertifyjs/build/css/themes/bootstrap.min.css';
+/* Base */
+button {
+    display: inline-block;
+    padding: 12px 24px;
+    background: rgb(220,220,220);
+    font-weight: bold;
+    color: rgb(60,23,26);
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: ease .3s;
+  }
+  
+  button:hover {
+    background: #E6C924;
+    color: #ffffff;
+  }

@@ -1,0 +1,54 @@
+<div class="mt-3" align="center">Request A Quote</div>
+<form #quoteForm="ngForm" (ngSubmit)="submitQuote()">
+  <label>
+    <p class="label-txt">Company Name</p>
+    <input type="text" class="input" required name="companyname" [(ngModel)]="model.companyname"/>
+    <div class="line-box">
+      <div class="line"></div>
+    </div>
+  </label>
+  <label>
+    <p class="label-txt">Name</p>
+    <input type="text" class="input" required name="name" [(ngModel)]="model.name"/>
+    <div class="line-box">
+      <div class="line"></div>
+    </div>
+  </label>
+  <label>
+    <p class="label-txt">Phone</p>
+    <input type="email" class="input" required name="phone" [(ngModel)]="model.phone"/>
+    <div class="line-box">
+      <div class="line"></div>
+    </div>
+  </label>
+  <label>
+    <p class="label-txt">Email</p>
+    <input type="email" class="input" required name="email" [(ngModel)]="model.email"/>
+    <div class="line-box">
+      <div class="line"></div>
+    </div>
+  </label>
+
+  <label>
+    <p class="label-txt">Origin City</p>
+    <input type="text" class="input" required name="origincity" [(ngModel)]="model.origincity" />
+    <div class="line-box">
+      <div class="line"></div>
+    </div>
+  </label>
+  <label>
+    <p class="label-txt">Destination City</p>
+    <input type="text" class="input" required name="destinationcity" [(ngModel)]="model.destinationcity"/>
+    <div class="line-box">
+      <div class="line"></div>
+    </div>
+  </label>
+  <label>
+    <p class="label-txt">Brief Overview</p>
+    <textarea cols="50" rows="10" class="input" required name="overview" [(ngModel)]="model.overview"></textarea>
+    <div class="line-box">
+      <div class="line"></div>
+    </div>
+  </label>
+  <button type="submit" [disabled] ="!quoteForm.valid">Submit</button>
+</form>
