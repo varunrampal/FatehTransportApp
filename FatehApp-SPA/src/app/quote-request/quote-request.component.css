@@ -2,7 +2,7 @@ form {
     width: 60%;
     margin: 60px auto;
     background: #efefef;
-    padding: 60px 120px 80px 120px;
+    padding: 10px 120px 10px 120px;
     text-align: center;
     -webkit-box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
     box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
@@ -44,7 +44,7 @@ form {
     top: 0px;
     left: 50%;
     transform: translateX(-50%);
-    background: #8BC34A;
+    background: #DEFB00;
     transition: ease .6s;
   }
   

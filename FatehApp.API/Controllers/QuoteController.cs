@@ -16,7 +16,7 @@ using Microsoft.IdentityModel.Tokens;
 
 namespace FatehApp.API.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class QuoteController : ControllerBase

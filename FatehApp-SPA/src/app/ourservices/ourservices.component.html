@@ -1,0 +1,108 @@
+<div *ngIf="!indexPage">
+  
+<router-outlet></router-outlet>
+</div>
+<div  *ngIf="indexPage">
+  <hr class="featurette-divider">
+  <div class="album py-5 bg-light">
+    <div class="container">
+      <div style="text-align: center;"><h1>OUR SERVICES</h1></div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <img src="/assets/img/Fatesh_Logistics-Multimodal.jpg" width="100%" height="225">
+            <div class="card-body">
+              <small class="text-muted"><strong>Logistics</strong></small>
+              <p class="card-text">We partner with only reliable and proven carriers to ensure that your freight will be delivered according to your requirements.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a class="btn btn-secondary" role="button" [routerLink]="['/our-services/logistics']">View details »</a>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <img src="/assets/img/Fateh_autohaul.jpg" width="100%" height="225">
+            <div class="card-body">
+              <small class="text-muted"><strong>Auto Haul</strong></small>
+              <p class="card-text">We believe in co-operation, combined with a united efforts & always make a huge difference in providing excellent services.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a class="btn btn-secondary" [routerLink]="['/our-services/auto-haul']" role="button">View details »</a>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <img src="/assets/img/Fateh_heavyhaul.jpg" width="100%" height="225">
+            <div class="card-body">
+              <small class="text-muted"><strong>Heavy Haul</strong></small>
+              <p class="card-text">Our team of trained professionals are ready for any challenge whether it be tackling the Northern Canadian Ice roads.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a class="btn btn-secondary" [routerLink]="['/our-services/heavy-haul']" role="button">View details »</a>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <img src="/assets/img/Fateh_superb.jpg" width="100%" height="225">
+            <div class="card-body">
+              <small class="text-muted"><strong>Super B</strong></small>
+              <p class="card-text">We provide Truck Load or LTL service to our customers in the manufacturing, building materials and forest industries.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a class="btn btn-secondary" [routerLink]="['/our-services/super-b']" role="button">View details »</a>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <img src="/assets/img/Fateh_tandemflat.jpg" width="100%" height="225">
+            <div class="card-body">
+              <small class="text-muted"><strong>Tandom Flat / Step & Roll-Tite</strong></small>
+              <p class="card-text">In an effort to provide seamless, service-sensitive, headache-free solutions.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a class="btn btn-secondary" [routerLink]="['/our-services/tandem-flat-step-tite']" role="button">View details »</a>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <img src="/assets/img/fateh_dryvan.jpg" width="100%" height="225">
+            <div class="card-body">
+              <small class="text-muted"><strong>Dry Van / Heated Van</strong></small>
+              <p class="card-text">Our commitment to safety, service, and damage-free delivery.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a class="btn btn-secondary" [routerLink]="['/our-services/dry-van']" role="button">View details »</a>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+  
+       </div>
+    </div>
+  </div>
+
+</div>

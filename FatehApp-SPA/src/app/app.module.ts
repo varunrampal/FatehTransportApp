@@ -19,6 +19,12 @@ import { QuoteRequestComponent } from './quote-request/quote-request.component';
 import { AlertifyService } from './_services/alertify.service';
 import { QuoteService } from './_services/quote.service';
 import { ErrorInterceptorProvider } from './_services/error.interceptor';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { OurservicesComponent } from './ourservices/ourservices.component';
+import { OurServicesRoutingModule } from './ourservices/ourservices.routing';
+import { LogisticsComponent } from './ourservices/logistics/logistics.component';
+import { OurservicesModule } from './ourservices/ourservices.module';
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -30,7 +36,10 @@ import { ErrorInterceptorProvider } from './_services/error.interceptor';
       FrontPageCrouselComponent,
       QuotesComponent,
       HomeComponent,
-      QuoteRequestComponent
+      QuoteRequestComponent,
+      AboutusComponent,
+      OurservicesComponent,
+      FooterComponent
    ],
    imports: [
       BrowserModule,
@@ -38,6 +47,7 @@ import { ErrorInterceptorProvider } from './_services/error.interceptor';
       FormsModule,
       BsDropdownModule.forRoot(),
       CarouselModule.forRoot(),
+      OurservicesModule,
       RouterModule.forRoot(appRoutes),
       ModalModule.forRoot()
    ],
