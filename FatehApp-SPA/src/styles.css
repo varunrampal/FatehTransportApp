@@ -18,7 +18,7 @@ button {
   }
   
   button:hover {
-    background: #E3C60B;
+    background: rgb(250, 218, 7);
     color: #ffffff;
   }
 
@@ -29,4 +29,17 @@ button {
     vertical-align: middle;
     
       
+    }
+
+    .policy{
+
+      background-color: #EFEFEF;
+    }
+
+    .text-heading {
+     font-size: 18px;
+     font-weight: bold;
+     font-family: Arial, Helvetica, sans-serif;
+
+
     }

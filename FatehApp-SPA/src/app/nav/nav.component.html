@@ -12,38 +12,56 @@
       </li>
 
       <li class="nav-item" routerLinkActive="active">
-        <div *ngIf="loggedIn()" class="dropdown nav-link" dropdown triggers="hover">
+        <div class="dropdown nav-link" dropdown triggers="hover">
           <a class="dropdown-toggle text-light" dropdownToggle [routerLink]="['/our-services']">
             OUR SERVICES
           </a>
 
           <div class="dropdown-menu mt-3" *dropdownMenu style="padding-right: 10px;">
-            <a class="dropdown-item" [routerLink]="['/our-services/logistics']" routerLinkActive="active">Logistics</a>
+            <a class="dropdown-item" [routerLink]="['/our-services/logistics']" routerLinkActive="active">LOGISTICS</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" [routerLink]="['/our-services/auto-haul']" routerLinkActive="active">Auto Haul</a>
+            <a class="dropdown-item" [routerLink]="['/our-services/auto-haul']" routerLinkActive="active">AUTO HAUL</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" [routerLink]="['/our-services/heavy-haul']" routerLinkActive="active">Heavy Haul</a>
+            <a class="dropdown-item" [routerLink]="['/our-services/heavy-haul']" routerLinkActive="active">HEAVY HAUL</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" [routerLink]="['/our-services/super-b']" routerLinkActive="active">Super B</a>
+            <a class="dropdown-item" [routerLink]="['/our-services/super-b']" routerLinkActive="active">SUPER B</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" [routerLink]="['/our-services/tandem-flat-step-tite']" routerLinkActive="active">Tandem Flat / Slip & Roll-Tite</a>
+            <a class="dropdown-item" [routerLink]="['/our-services/tandem-flat-step-tite']" routerLinkActive="active">TANDEM FLAT / SLIP & ROLL-TITE</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" [routerLink]="['/our-services/dry-van']" routerLinkActive="active">Dry Van</a>
+            <a class="dropdown-item" [routerLink]="['/our-services/dry-van']" routerLinkActive="active">DRY VAN</a>
           </div>
         </div>
       </li>
 
-      <li class="nav-item">
-        <a class="nav-link" href="#">WHY CHOOSE US</a>
+      <li class="nav-item" routerLinkActive="active">
+        <div class="dropdown nav-link" dropdown triggers="hover">
+          <a class="dropdown-toggle text-light" dropdownToggle [routerLink]="['/why-choose-us']">
+            WHY CHOOSE US?
+          </a>
+
+          <div class="dropdown-menu mt-3" *dropdownMenu style="padding-right: 10px;">
+            <a class="dropdown-item" [routerLink]="['/why-choose-us/company-profile']" routerLinkActive="active">COMPANY PROFILE</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" [routerLink]="['/why-choose-us/management-philosophy']" routerLinkActive="active">MANAGEMENT PHILOSOPHY</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" [routerLink]="['/why-choose-us/our-commitment']" routerLinkActive="active">OUR COMITMENT</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" [routerLink]="['/why-choose-us/our-technology']" routerLinkActive="active">OUT TECHNOLOGY</a>
+            <!-- <div class="dropdown-divider"></div>
+            <a class="dropdown-item" [routerLink]="['/why-choose-us/equipment-and-accessories']" routerLinkActive="active">EQUIPMENT & ACCESSORIES</a> -->
+            
+          </div>
+        </div>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">SAFETY & COMPLIANCE</a>
+
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['/safety-compliance']">SAFETY & COMPLIANCE</a>
       </li>
       <li class="nav-item" routerLinkActive="active">
         <a class="nav-link" [routerLink]="['/quotes-request']">GET A QUOTE</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">CONTACT</a>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['/contact-us']">CONTACT</a>
       </li>
     </ul>
 

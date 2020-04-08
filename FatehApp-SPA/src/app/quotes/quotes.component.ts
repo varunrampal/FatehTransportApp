@@ -4,6 +4,7 @@ import { Quote } from '../_models/quote';
 import { QuoteService } from '../_services/quote.service';
 import { AlertifyService } from '../_services/alertify.service';
 import { DATE } from 'ngx-bootstrap/chronos/units/constants';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-quotes',
@@ -14,15 +15,21 @@ export class QuotesComponent implements OnInit {
   modalRef: BsModalRef;
   quotes: Quote[];
   quoteSelected: any;
+  q: Quote;
 
   constructor(
     private quoteService: QuoteService,
     private alertifyService: AlertifyService,
-    private modalService: BsModalService
+    private modalService: BsModalService,
+    private route: ActivatedRoute
   ) {}
 
   ngOnInit() {
-    this.loadQuotes();
+   // this.loadQuotes();
+    this.route.data.subscribe(data => {
+      this.quotes = data.quotes;
+      console.log(data);
+    });
   }
 
   loadQuotes() {

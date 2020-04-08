@@ -21,12 +21,12 @@ import { QuoteService } from './_services/quote.service';
 import { ErrorInterceptorProvider } from './_services/error.interceptor';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { OurservicesComponent } from './ourservices/ourservices.component';
-import { OurServicesRoutingModule } from './ourservices/ourservices.routing';
-import { LogisticsComponent } from './ourservices/logistics/logistics.component';
 import { OurservicesModule } from './ourservices/ourservices.module';
 import { FooterComponent } from './footer/footer.component';
-
-
+import { QuoteResolver } from './_resolvers/quotes.resolver';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { SafetyComplianceComponent } from './safety-compliance/safety-compliance.component';
+import { WhyChooseUsModule } from './why-choose-us/whychooseus.module';
 
 @NgModule({
    declarations: [
@@ -39,7 +39,9 @@ import { FooterComponent } from './footer/footer.component';
       QuoteRequestComponent,
       AboutusComponent,
       OurservicesComponent,
-      FooterComponent
+      FooterComponent,
+      ContactUsComponent,
+      SafetyComplianceComponent,
    ],
    imports: [
       BrowserModule,
@@ -48,6 +50,7 @@ import { FooterComponent } from './footer/footer.component';
       BsDropdownModule.forRoot(),
       CarouselModule.forRoot(),
       OurservicesModule,
+      WhyChooseUsModule,
       RouterModule.forRoot(appRoutes),
       ModalModule.forRoot()
    ],
@@ -55,7 +58,8 @@ import { FooterComponent } from './footer/footer.component';
       ErrorInterceptorProvider,
       AuthService,
       AlertifyService,
-      QuoteService
+      QuoteService,
+      QuoteResolver
    ],
    bootstrap: [
       AppComponent
