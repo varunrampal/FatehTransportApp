@@ -43,10 +43,14 @@ export class QuoteService {
           quote.quoteDate = this.convertDateFormat(quoteDate);
           if (quote.overview === null || quote.overview === '') {
             quote.overview = 'no overview submitted';
-          } 
+          }
           return quote;
         })
       );
+  }
+
+  deleteQuote(id: number) {
+    return this.http.post(this.baseUrl + 'deletequote/' + id, httppOtions);
   }
 
   convertDateFormat(date) {

@@ -6,6 +6,7 @@
         <th scope="col">Company Name</th>
         <th scope="col">Date</th>
         <th scope="col"></th>
+     
       </tr>
     </thead>
     <tbody>
@@ -20,8 +21,17 @@
             (click)="openModal(template, quote.id)"
           >
             Details
-          </button>
+          </button>&nbsp;
+          <button
+          type="button"
+         class="delete"
+          (click)="deleteQuote(quote.id)"
+        >
+          Delete
+        </button>
         </td>
+        
+        
       </tr>
     </tbody>
   </table>

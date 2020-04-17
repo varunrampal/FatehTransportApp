@@ -10,7 +10,7 @@ namespace FatehApp.API.Data
 {
     public class QuoteRepository : IQuoteRepository
     {
-       public DataContext _Context { get; set; }
+        public DataContext _Context { get; set; }
 
         public QuoteRepository(DataContext context)
         {
@@ -19,17 +19,18 @@ namespace FatehApp.API.Data
 
         public async Task<Quote> SaveQuote(QuoteDto quoteDto)
         {
-           var quoteToSave = new Quote {
-             CompanyName = quoteDto.CompanyName,
-             Name = quoteDto.Name,
-             Email = quoteDto.Email,
-             Phone = quoteDto.Phone,
-             OriginCity = quoteDto.OriginCity,
-             DestinationCity = quoteDto.DestinationCity,
-             Overview = quoteDto.Overview,
-             QuoteDate = DateTime.Now
-           };
-           
+            var quoteToSave = new Quote
+            {
+                CompanyName = quoteDto.CompanyName,
+                Name = quoteDto.Name,
+                Email = quoteDto.Email,
+                Phone = quoteDto.Phone,
+                OriginCity = quoteDto.OriginCity,
+                DestinationCity = quoteDto.DestinationCity,
+                Overview = quoteDto.Overview,
+                QuoteDate = DateTime.Now
+            };
+
             await _Context.Quotes.AddAsync(quoteToSave);
             await _Context.SaveChangesAsync();
 
@@ -43,7 +44,14 @@ namespace FatehApp.API.Data
 
         public async Task<Quote> GetQuote(int id)
         {
-           return await _Context.Quotes.FirstOrDefaultAsync(q => q.Id == id);
+            return await _Context.Quotes.FirstOrDefaultAsync(q => q.Id == id);
+        }
+
+        public int DeleteQuote(int id)
+        {
+             _Context.Remove(_Context.Quotes.Single(a => a.Id == id));
+             return _Context.SaveChanges();
+          
         }
     }
 }

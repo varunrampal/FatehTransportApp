@@ -17,6 +17,23 @@ button {
     transition: ease .3s;
   }
   
+  button.delete {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #ff0000;
+    font-weight: bold;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: ease .3s;
+  }
+  button.delete:hover {
+    background: #ff3333;
+    color: #ffffff;
+  }
+
   button:hover {
     background: rgb(250, 218, 7);
     color: #ffffff;

@@ -10,5 +10,6 @@ namespace FatehApp.API.Data
          Task<Quote> SaveQuote(QuoteDto quoteDto);
          Task<List<Quote>> GetQuotes();
          Task<Quote> GetQuote(int id);
+         int DeleteQuote(int id);
     }
 }

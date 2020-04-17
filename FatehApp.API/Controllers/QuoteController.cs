@@ -66,6 +66,24 @@ namespace FatehApp.API.Controllers
             var quoteToReturn = _mapper.Map<QuoteDto>(quotes);
             return Ok(quoteToReturn);
         }
+
+        [HttpPost]
+        [Route("deletequote/{id:int}")]
+        public IActionResult DeleteQuote(int id)
+        {
+             var quote =   _quoteRepo.GetQuote(id);
+
+             if(quote != null)
+             {
+                  _quoteRepo.DeleteQuote(id);
+                  return StatusCode(204);
+             }
+             else
+             {
+                  return StatusCode(400);
+             }
+
+        }
              
     }
 }

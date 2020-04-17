@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-quotes',
   templateUrl: './quotes.component.html',
-  styleUrls: ['./quotes.component.css']
+  styleUrls: ['./quotes.component.css'],
 })
 export class QuotesComponent implements OnInit {
   modalRef: BsModalRef;
@@ -25,8 +25,8 @@ export class QuotesComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-   // this.loadQuotes();
-    this.route.data.subscribe(data => {
+    // this.loadQuotes();
+    this.route.data.subscribe((data) => {
       this.quotes = data.quotes;
       console.log(data);
     });
@@ -37,7 +37,7 @@ export class QuotesComponent implements OnInit {
       (quotes: Quote[]) => {
         this.quotes = quotes;
       },
-      error => {
+      (error) => {
         this.alertifyService.error(error);
       }
     );
@@ -46,14 +46,28 @@ export class QuotesComponent implements OnInit {
   openModal(template: TemplateRef<any>, id: any) {
     this.quoteService.getQuote(id).subscribe(
       (quote: Quote) => {
-         this.quoteSelected = quote;
-         this.modalRef = this.modalService.show(template,  {class: 'modal-lg'});
+        this.quoteSelected = quote;
+        this.modalRef = this.modalService.show(template, { class: 'modal-lg' });
       },
-      error => {
+      (error) => {
         this.alertifyService.error(error);
       }
     );
-
   }
 
+  deleteQuote(id: number) {
+       this.alertifyService.confirm(
+      'Are you sure you want to delete this quote?',
+      () => {
+        this.quoteService.deleteQuote(id).subscribe(
+          () => {
+            this.alertifyService.success('Quote deleted successfully!');
+          },
+          (error) => {
+            this.alertifyService.error('Error in deleting quote!');
+          }
+        );
+      }
+    );
   }
+}
