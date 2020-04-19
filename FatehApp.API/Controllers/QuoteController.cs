@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using FatehApp.API.Data;
 using FatehApp.API.Dtos;
+using FatehApp.API.Helpers;
 using FatehApp.API.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -49,11 +50,14 @@ namespace FatehApp.API.Controllers
         }
 
         [HttpGet("getquotes")]
-        public async Task<IActionResult> GetQuotes()
+        public async Task<IActionResult> GetQuotes([FromQuery]QuoteParams quoteParams)
         {
-            var quotes =  await _quoteRepo.GetQuotes();
+            var quotes =  await _quoteRepo.GetQuotes(quoteParams);
             
             var quoteToReturn = _mapper.Map<IEnumerable<QuoteDto>>(quotes);
+
+            Response.AddPagination(quotes.CurrentPage, quotes.PageSize, 
+            quotes.TotalCount, quotes.TotalPages);
             return Ok(quoteToReturn);
         }
 

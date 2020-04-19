@@ -60,8 +60,23 @@
       <li class="nav-item" routerLinkActive="active">
         <a class="nav-link" [routerLink]="['/quotes-request']">GET A QUOTE</a>
       </li>
-      <li class="nav-item" routerLinkActive="active">
+      <!-- <li class="nav-item" routerLinkActive="active">
         <a class="nav-link" [routerLink]="['/contact-us']">CONTACT</a>
+      </li> -->
+
+      <li class="nav-item" routerLinkActive="active">
+        <div class="dropdown nav-link" dropdown triggers="hover">
+          <a class="dropdown-toggle text-light" dropdownToggle [routerLink]="['/contact-us']">
+            CONTACT
+          </a>
+          <div class="dropdown-menu mt-3" *dropdownMenu style="padding-right: 10px;">
+            <a class="dropdown-item" [routerLink]="['/contact-us/office-locations']" routerLinkActive="active">OFFICE LOCATIONS</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" [routerLink]="['/contact-us/employment']" routerLinkActive="active">EMPLOYMENT</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" [routerLink]="['/contact-us/download-form']" routerLinkActive="active">DOWNLOAD FORM</a>
+          </div>
+        </div>
       </li>
     </ul>
 

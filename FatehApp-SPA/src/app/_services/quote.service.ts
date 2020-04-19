@@ -4,6 +4,7 @@ import { environment } from 'src/environments/environment';
 import { Observable } from 'rxjs';
 import { Quote } from '../_models/quote';
 import { map } from 'rxjs/operators';
+import { PaginatedResult } from '../_models/pagination';
 
 const httppOtions = {
   headers: new HttpHeaders({
@@ -33,6 +34,33 @@ export class QuoteService {
       })
     );
   }
+
+
+  // getQuotes(page?, itemsPerPage?): Observable<PaginatedResult<Quote[]>> {
+  //   const paginatedResult: PaginatedResult<Quote[]> = new PaginatedResult<Quote[]>();
+  //   let params = new  HttpParams();
+
+  //   if (page != null && itemsPerPage != null) {
+
+  //       params = params.append('pageNumber', page);
+  //       params = params.append('pageSize', itemsPerPage);
+  //   }
+
+  //   return this.http.get<Quote[]>(this.baseUrl + 'getquotes', {observe: 'response', params}).pipe(
+  //     map(res => {
+  //       paginatedResult.result = res.body;
+  //       if (res.headers.get('Pagination') != null) {
+
+  //         paginatedResult.pagination = JSON.parse(res.headers.get('Pagination'))
+  //       }
+  //       return res.map(quote => {
+  //         const quoteDate = new Date(quote.quoteDate);
+  //         quote.quoteDate = this.convertDateFormat(quoteDate);
+  //         return quote;
+  //       });
+  //     })
+  //   );
+  // }
 
   getQuote(id: any): Observable<Quote> {
     return this.http

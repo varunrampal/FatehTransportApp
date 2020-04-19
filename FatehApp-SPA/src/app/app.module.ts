@@ -27,6 +27,7 @@ import { QuoteResolver } from './_resolvers/quotes.resolver';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { SafetyComplianceComponent } from './safety-compliance/safety-compliance.component';
 import { WhyChooseUsModule } from './why-choose-us/whychooseus.module';
+import { ContactusModule } from './contact-us/contactus.module';
 
 @NgModule({
    declarations: [
@@ -51,6 +52,7 @@ import { WhyChooseUsModule } from './why-choose-us/whychooseus.module';
       CarouselModule.forRoot(),
       OurservicesModule,
       WhyChooseUsModule,
+      ContactusModule,
       RouterModule.forRoot(appRoutes),
       ModalModule.forRoot()
    ],

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using FatehApp.API.Dtos;
+using FatehApp.API.Helpers;
 using FatehApp.API.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -37,9 +38,11 @@ namespace FatehApp.API.Data
             return quoteToSave;
         }
 
-        public async Task<List<Quote>> GetQuotes()
+        public async Task<PagedList<Quote>> GetQuotes(QuoteParams quoteParams)
         {
-            return await _Context.Quotes.OrderByDescending(q => q.QuoteDate).ToListAsync();
+            var quotes =   _Context.Quotes.OrderByDescending(q => q.QuoteDate);
+
+            return await PagedList<Quote>.CreateAsync(quotes, quoteParams.PageNumber, quoteParams.PageSize);
         }
 
         public async Task<Quote> GetQuote(int id)
